@@ -1,0 +1,19 @@
+.comment-reply-link {
+  @extend .uk-link-muted;
+}
+
+.uk-comment-list {
+  ul.children {
+    list-style-type: none;
+  }
+
+  > :nth-child(n+2) {
+    margin: 20px;
+  }
+}
+
+.odd {
+  > .uk-comment {
+    @extend .uk-comment-primary;
+  }
+}

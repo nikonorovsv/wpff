@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Marmelad&display=swap&subset=cyrillic');
+@import "parts/uikit";
+@import "parts/comments";
+@import "parts/forms";
+
+body {
+  background-image: url(//21sad.ru/wp-content/themes/21sad-2/assets/images/bg4.png);
+  background-repeat: repeat;
+  // background-attachment: fixed;
+  // background-size: 100%;
+  background-color: #fffffe;
+}
+
+::selection,
+::-moz-selection {
+  background-color: $global-warning-background;
+  color: $global-inverse-color;
+}
+
+.current-menu-parent,
+.current_menu_item,
+.current-menu-item,
+.current_page_item {
+  @extend .uk-active;
+}
+
+.uk-table {
+  thead {
+    background-color: $global-success-background;
+  }
+  th {
+    font-weight: bold!important;
+    color: $global-inverse-color;
+  }
+}
+
+#main-links-slider {
+  height: 160px;
+  .uk-card {
+    height: 124px;
+  }
+}
+
+#wp-calendar {
+  width: 100%;
+}
+
+.wp-calendar-nav {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.zig-zag-bottom {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -24px;
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(135deg,
+           white 25%, rgba(0, 0, 0, 0) 25%), linear-gradient(225deg, white 25%,
+           rgba(0, 0, 0, 0) 25%);
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 20px 100%;
+    z-index: 100;
+  }
+}
+
+.dem-poll-title {
+  margin-top: 0!important;
+  font-size: 100%!important;
+}

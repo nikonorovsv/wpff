@@ -1,0 +1,59 @@
+// 1. Your custom variables and variable overwrites.
+
+$global-background: #fffffe;
+$global-primary-background: #febd51;
+$global-secondary-background: #496128;
+$global-success-background: #679d2d;
+$global-warning-background: #eb7f4e;
+$global-danger-background: #c64c35;
+$global-muted-background: #fcf1c8;
+$global-muted-color: #b4a97e;
+$global-emphasis-color: #381c10;
+$global-color: #31241d;
+$global-inverse-color: #fffffe;
+$global-border: #d9d0af;
+//$base-ins-background: #ffd;
+//$base-mark-background: #ffd;
+$base-selection-background: #eb7f4e;
+$form-select-option-color: #381c10;
+$lightbox-background: #211109;
+$lightbox-toolbar-background: rgba(56,28,16,0.1);
+$dotnav-item-hover-background: #febd51;
+$dotnav-item-active-background: #febd51;
+$dotnav-item-border: #d9d0af;
+//$lightbox-item-color: rgba(255,255,255,0.7);
+//$lightbox-toolbar-color: rgba(255,255,255,0.7);
+//$lightbox-toolbar-icon-color: rgba(255,255,255,0.7);
+//$lightbox-toolbar-icon-hover-color: #fff;
+//$lightbox-button-color: rgba(255,255,255,0.7);
+//$lightbox-button-hover-color: #fff;
+//$modal-background: rgba(56,28,16,0.6);
+//$offcanvas-overlay-background: rgba(56,28,16,0.1);
+//$table-row-active-background: #ffd;
+//$tooltip-background: #666;
+// $dragover-box-shadow: 0 0 20px rgba(100,100,100,0.3);
+$global-small-box-shadow: 0 2px 8px rgba(56,28,16,0.08);
+$global-medium-box-shadow: 0 5px 15px rgba(56,28,16,0.08);
+$global-large-box-shadow: 0 14px 25px rgba(56,28,16,0.16);
+$global-xlarge-box-shadow: 0 28px 50px rgba(56,28,16,0.16);
+$box-shadow-bottom-background: rgba(56,28,16,0.16);
+
+$global-font-family: 'Marmelad', sans-serif;
+$global-link-color: #679d2d;
+$global-link-hover-color: #496128;
+$icon-link-color: #679d2d;
+$icon-link-hover-color: #496128;
+
+$offcanvas-bar-background: $global-muted-background;
+$offcanvas-bar-color-mode: none;
+$navbar-background:  $global-success-background;
+
+// 2. Import default variables and available mixins.
+@import "variables-theme.scss";
+@import "mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+// @mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "uikit-theme.scss";

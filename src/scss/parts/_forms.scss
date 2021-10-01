@@ -1,0 +1,81 @@
+.wpcf7-form {
+  @extend .uk-form-stacked;
+  label {
+    @extend .uk-form-label;
+    // float: none!important;
+    // width: auto!important;
+  }
+  select {
+    @extend .uk-select;
+    // width: 100%!important;
+  }
+  textarea {
+    @extend .uk-textarea;
+    // width: 100%!important;
+  }
+  input.wpcf7-text {
+    @extend .uk-input;
+    // padding: 0 10px !important;
+    // width: 100% !important;
+  }
+  input[type=checkbox] {
+    @extend .uk-checkbox
+  }
+  .button {
+    @extend .uk-button, .uk-button-large, .uk-button-primary;
+  }
+}
+
+.wppb-user-forms {
+  @extend .uk-form-stacked;
+  ul {
+    padding: 0;
+    > li {
+      list-style-type: none;
+    }
+  }
+
+  label {
+    @extend .uk-form-label;
+    float: none!important;
+    width: auto!important;
+  }
+
+  select {
+    @extend .uk-select;
+    width: 100%!important;
+  }
+
+  textarea {
+    @extend .uk-textarea;
+    width: 100%!important;
+  }
+
+  input.text-input,
+  input.input {
+    @extend .uk-input;
+    padding: 0 10px !important;
+    width: 100% !important;
+  }
+
+  input[type=checkbox] {
+    @extend .uk-checkbox
+  }
+
+  .wppb-recaptcha {
+    display: none;
+  }
+
+  .wppb-error {
+    @extend .uk-alert, .uk-alert-danger;
+    border: none;
+  }
+
+  .button {
+    @extend .uk-button, .uk-button-large, .uk-button-primary;
+  }
+}
+
+.wppb-form-field {
+  @extend .uk-margin-small;
+}
