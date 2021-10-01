@@ -3,6 +3,8 @@
 const webpack = require('webpack')
 const path = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { VueLoaderPlugin } = require('vue-loader')
+
 
 let config = {
   externals: {
@@ -11,16 +13,6 @@ let config = {
   entry: [
     path.resolve(__dirname, 'src/js/app.js'),
     path.resolve(__dirname, 'src/scss/app.scss'),
-    path.resolve(__dirname, 'src/images/bg4.png'),
-    path.resolve(__dirname, 'src/images/footer-castle.png'),
-    path.resolve(__dirname, 'src/images/logo-source.png'),
-    path.resolve(__dirname, 'src/images/logo.png'),
-    path.resolve(__dirname, 'src/images/children1.png'),
-    path.resolve(__dirname, 'src/images/children2.png'),
-    // path.resolve(__dirname, 'src/images/children3.png'),
-    // path.resolve(__dirname, 'src/images/children4.png'),
-    // path.resolve(__dirname, 'src/images/children5.png'),
-    path.resolve(__dirname, 'src/images/konkurs.png'),
     path.resolve(__dirname, 'src/images/customers/daniel.jpg'),
     path.resolve(__dirname, 'src/images/customers/elliot.jpg'),
     path.resolve(__dirname, 'src/images/customers/elyse.png'),
@@ -68,6 +60,7 @@ let config = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
+        // type: 'asset/resource',
         use: [
           {
             loader: 'file-loader',
@@ -80,6 +73,7 @@ let config = {
       },
       {
         test: /\.(ttf|eot|woff|woff2)$/,
+        // type: 'asset/resource',
         use: [
           {
             loader: 'file-loader',
@@ -92,11 +86,12 @@ let config = {
       }
     ]
   },
-  // resolve: {
-  //   alias: {
-  //     '@': path.resolve(__dirname, 'node_modules'),
-  //   }
-  // },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-browser',
+      // '@': path.resolve(__dirname, 'node_modules'),
+    }
+  },
   plugins: [
     new webpack.DefinePlugin({
       AJAX_URL: JSON.stringify('/wp-admin/admin-ajax.php'),
@@ -106,6 +101,7 @@ let config = {
       google: 'google',
       'window.google': 'google'
     }),
+    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'app.css'
     })
